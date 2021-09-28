@@ -1,0 +1,11 @@
+<app-entete (toggleSideBarMenu)="sideBarToggler($event)"></app-entete>
+
+<mat-drawer-container>
+<mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-menu-vertical></app-menu-vertical>
+</mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+<app-pied-page></app-pied-page>
